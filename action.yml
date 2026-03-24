@@ -1,0 +1,21 @@
+name: "S3 Cache"
+description: "Restore + Save cache to S3"
+
+inputs:
+  key:
+    required: true
+  path:
+    required: true
+  bucket:
+    required: true
+  region:
+    required: false
+
+outputs:
+  cache-hit:
+    value: ${{ steps.main.outputs.cache-hit }}
+
+runs:
+  using: "node20"
+  main: "dist/main/index.js"
+  post: "dist/post/index.js"
