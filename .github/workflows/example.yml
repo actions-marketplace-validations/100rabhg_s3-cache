@@ -1,10 +1,11 @@
 name: Example S3 Cache Workflow
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+# Disabled: comment out the trigger to prevent workflow from running automatically
+# on:
+#   push:
+#     branches: [ main ]
+#   pull_request:
+#     branches: [ main ]
 
 jobs:
   build:

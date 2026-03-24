@@ -1,5 +1,5 @@
 
-# S3 Cache ![CI](https://github.com/100rabhg/s3-cache/actions/workflows/ci.yml/badge.svg) [![GitHub Marketplace](https://img.shields.io/badge/marketplace-s3--cache-blue)](https://github.com/marketplace/actions/s3-cache) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+# [![GitHub Marketplace](https://img.shields.io/badge/marketplace-s3--cache-blue)](https://github.com/marketplace/actions/s3-cache) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 A GitHub Action to cache dependencies and artifacts using AWS S3. Useful for monorepos, large dependencies, or workflows where GitHub's built-in cache is insufficient.
 
