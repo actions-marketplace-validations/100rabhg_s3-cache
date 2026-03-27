@@ -41,6 +41,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Setup Node.js 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
@@ -51,7 +55,7 @@ jobs:
         id: cache
         uses: 100rabhg/s3-cache@v1
         with:
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-node24-${{ hashFiles('**/package-lock.json') }}
           path: node_modules
           bucket: ${{ env.AWS_BUCKET }}
           region: ${{ env.AWS_REGION }}
@@ -65,6 +69,17 @@ jobs:
 ## Example Workflow
 
 See [example workflow](.github/workflows/example.yml) for a complete setup.
+
+---
+
+## Development
+
+Requires Node.js 24+. Rebuild the bundled `dist/` files with:
+
+```sh
+npm ci
+npm run build
+```
 
 ---
 

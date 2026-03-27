@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "A GitHub Action to cache dependencies and artifacts using AWS S3.",
   "main": "dist/main/index.js",
+  "engines": {
+    "node": ">=24"
+  },
   "scripts": {
     "build": "ncc build index.js -o dist/main && ncc build post.js -o dist/post"
   },
